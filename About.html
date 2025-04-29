@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Eagle Mark Holding Ltd</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    .topbar {
+  background: #1E4841;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topbar span {
+  margin-right: 20px;
+}
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  height: 45px;
+}
+
+/* Menu Container */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1E4841;
+}
+
+/* Button */
+.membership-btn {
+  background: #1E4841;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.membership-btn:hover {
+  background: #1E4841;
+}
+
+.hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 2px;
+      width: 100%;
+      background-color: #1E4841;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+.mobile-membership {
+  display: none;
+}
+
+
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 0 1rem;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        background-color: #fff;
+        width: 250px;
+        height: calc(100vh - 60px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+        transition: all 0.3s ease;
+        z-index: 99;
+        box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-menu.active {
+        right: 0;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+      }
+
+      .nav-links li {
+        width: 100%;
+        height: auto;
+        margin: 8px 0;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 20px;
+        justify-content: flex-start;
+      }
+
+      /* Hide desktop membership button */
+      .membership-btn {
+        display: none;
+      }
+
+      /* Show mobile membership link */
+      .mobile-membership {
+        display: block;
+      }
+
+      .mobile-membership a {
+        color: #1E4841;
+        font-weight: 500;
+      }
+
+      /* Animated hamburger to X */
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+    /* Hero Section */
+    .hero {
+        background-color: #1E4841;
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+    }
+    
+    .hero-content h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+    
+    .hero-subtitle {
+      font-size: 18px;
+      color: #dddddd;
+      margin-bottom: 25px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: #1E4841;
+      color: #fff;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: #15332D;
+    }
+    
+  
+
+   
+ 
+    
+    /* Responsive Adjustments for Navigation */
+    @media (max-width: 768px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+    
+      .nav-container {
+        flex-direction: column;
+        border-bottom: none;
+      }
+    
+      
+ 
+    }
+    
+    /* About Section */
+    .about-section {
+      padding: 60px 0;
+    }
+    
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .about-content h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #1E4841;
+    }
+    
+    .about-content p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+    
+    .about-image {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 5px 15px rgba(30, 72, 65, 0.15);
+    }
+    
+    /* Mission Section */
+    .mission-section {
+      padding: 60px 0;
+      background-color: rgba(30, 72, 65, 0.05);
+    }
+    
+    .mission-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .mission-container h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #1E4841;
+    }
+    
+    .mission-container h3 {
+      color: #1E4841;
+      margin-bottom: 15px;
+    }
+    
+    .mission-container p {
+      max-width: 800px;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+      width: 100%;
+    }
+    
+    .value-item {
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 5px 15px rgba(30, 72, 65, 0.1);
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .value-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .value-item h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      position: relative;
+      color: #1E4841;
+    }
+    
+    .value-item h3:before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 20px;
+      background-color: #1E4841;
+    }
+    
+    .value-item p {
+      font-size: 14px;
+      color: #666;
+    }
+    
+    /* Services Section */
+    .services-section {
+      padding: 60px 0;
+    }
+    
+    .services-container {
+      text-align: center;
+    }
+    
+    .services-container h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #1E4841;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    
+    .service-item {
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 4px;
+      text-align: left;
+      transition: transform 0.3s ease;
+      border-left: 4px solid #1E4841;
+    }
+    
+    .service-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .service-item h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      position: relative;
+      color: #1E4841;
+    }
+    
+    .service-item p {
+      font-size: 14px;
+      color: #666;
+    }
+    .close-btn {
+        display: block;
+        font-size: 30px;
+        color: #1E4841;
+        text-align: right;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    /* History Section */
+    .history-section {
+      padding: 60px 0;
+      background-color: rgba(30, 72, 65, 0.05);
+    }
+    
+    .history-container {
+      text-align: center;
+    }
+    
+    .history-container h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #1E4841;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .timeline:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background-color: #1E4841;
+      transform: translateX(-50%);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+      width: 50%;
+      box-sizing: border-box;
+      padding: 0 40px;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+    
+    .timeline-item:before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #1E4841;
+      top: 0;
+    }
+    
+    .timeline-item:nth-child(odd):before {
+      right: -8px;
+    }
+    
+    .timeline-item:nth-child(even):before {
+      left: -8px;
+    }
+    
+    .timeline-date {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #1E4841;
+    }
+    
+    .timeline-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 5px 15px rgba(30, 72, 65, 0.1);
+    }
+    
+    .timeline-content h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #1E4841;
+    }
+    
+    .timeline-content p {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+      text-align: left;
+    }
+    
+    /* Testimonial Section */
+    /* Testimonial Section */
+.testimonial-section {
+  padding: 60px 0;
+  background-color: #1E4841;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-content h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Slide container */
+.testimonial-slide {
+  position: relative;
+  overflow: hidden;
+  height: 180px; /* Adjust height based on your content */
+}
+
+/* Each testimonial item */
+.testimonial-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  width: 100%;
+}
+
+/* Show active item */
+.testimonial-item.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Text and author */
+.testimonial-text {
+  font-style: italic;
+  margin: 20px 0;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Dots / indicators */
+.testimonial-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.testimonial-dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-dot.active {
+  background-color: #fff;
+}
+    footer {
+      background-color: #15332D;
+      color: #fff;
+      padding: 40px 0 20px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .footer-column h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #a6c0be;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-column ul li:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    .copyright {
+      font-size: 12px;
+      color: #6b8a86;
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+ 
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .about-grid, .values-grid, .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .timeline:before {
+        left: 20px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+      }
+      
+      .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: left;
+      }
+      
+      .timeline-item:nth-child(odd):before, .timeline-item:nth-child(even):before {
+        left: 12px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+
+    /* Container slide-in animation */
+.nav-container {
+  animation: slideIn 0.8s ease-out;
+}
+
+
+
+/* Slide-in animation keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 90;
+      display: none;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <span>info@ehl.rw</span>
+    <span>(+250) 788 310 273</span>
+  </div>
+  <!-- Header Section -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-icon"><img src="Logoo.png" alt="Eagle Mark Holding Logo"></span>
+    </div>
+    
+    <div class="nav-menu">
+      <div class="close-btn">&times;</div>
+      <ul class="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="SUBSIDIARY.html">Subsidiary</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+       
+      </ul>
+    </div>
+    
+    <button class="membership-btn">Get in touch</button>
+    
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <div class="overlay"></div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>About EHL</h1>
+        <p class="hero-subtitle">Eagle Mark Holding Ltd - Established August 8, 2008</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>Eagle Mark Holding (EHL) Ltd</h2>
+          <p>Eagle Mark Holding (EHL) Ltd is a private limited company, which was established on the 8th day of August 2008, with the objective of delivering reliable, high-quality solutions that make a positive impact on both our clients and the communities we serve.</p>
+          <p>EHL is also dedicated to empowering the Rwandan youth with the skills and experience to thrive by creating sustainable job opportunities.</p>
+          <p>EHL provides top-tier services across a range of industries, such as restaurant & catering, general cleaning & gardening, construction & maintenance, and more.</p>
+          <a href="#" class="cta-button">Learn More</a>
+        </div>
+        <div class="about-image-container">
+          <img src="1.jpg" alt="EHL Team" class="about-image">
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Mission Section -->
+  <section class="mission-section">
+    <div class="container">
+      <div class="mission-container">
+        <h2>Our Mission & Vision</h2>
+        <div class="about-grid">
+          <div>
+            <h3>Our Mission</h3>
+            <p>To be a vanguard in the Rwandan private sector success, while also improving the country's overall socio-economic operations.</p>
+          </div>
+          <div>
+            <h3>Our Vision</h3>
+            <p>To build a strong and reputable presence in industries we operate in, driven by a commitment to excellence, customer satisfaction, and continuous innovation. We strive to create long-term value for our stakeholders while positively impacting the market we serve.</p>
+          </div>
+        </div>
+        
+        <h2 style="margin-top: 40px;">Our Values</h2>
+        <div class="values-grid">
+          <div class="value-item">
+            <h3>Integrity</h3>
+            <p>We uphold honesty and ethical principles in all our business practices and relationships.</p>
+          </div>
+          <div class="value-item">
+            <h3>Excellence</h3>
+            <p>We strive for the highest standards in service delivery and operational performance.</p>
+          </div>
+          <div class="value-item">
+            <h3>Customer Focus</h3>
+            <p>We prioritize understanding and meeting the unique needs of each client we serve.</p>
+          </div>
+          <div class="value-item">
+            <h3>Innovation</h3>
+            <p>We constantly seek new and improved ways to deliver our services and solutions.</p>
+          </div>
+          <div class="value-item">
+            <h3>Team Work</h3>
+            <p>We collaborate effectively, leveraging our collective strengths to achieve common goals.</p>
+          </div>
+          <div class="value-item">
+            <h3>Sustainability</h3>
+            <p>We are committed to sustainable practices that benefit both our business and the communities we serve.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="services-container">
+        <h2>Our Services</h2>
+        
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>Restaurant & Banquet Services</h3>
+            <p>High-quality catering and restaurant services for all occasions, delivering exceptional culinary experiences.</p>
+          </div>
+          <div class="service-item">
+            <h3>General Supply Services</h3>
+            <p>Reliable procurement and supply of various goods to meet the diverse needs of our clients.</p>
+          </div>
+          <div class="service-item">
+            <h3>General Cleaning, Gardening & Car Wash Services</h3>
+            <p>Comprehensive cleaning and maintenance solutions for residential, commercial, and vehicle care needs.</p>
+          </div>
+          <div class="service-item">
+            <h3>Construction & Maintenance Services</h3>
+            <p>Professional building, renovation, and maintenance services delivered with expertise and attention to detail.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Section -->
+  <section class="history-section">
+    <div class="container">
+      <div class="history-container">
+        <h2>Our Journey</h2>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2008</div>
+            <div class="timeline-content">
+              <h3>Foundation</h3>
+              <p>Eagle Mark Holding Ltd was established on August 8, 2008, with a vision to deliver high-quality services in Rwanda.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">2010</div>
+            <div class="timeline-content">
+              <h3>Service Expansion</h3>
+              <p>EHL expanded its service portfolio to include restaurant & catering and general cleaning services.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">2015</div>
+            <div class="timeline-content">
+              <h3>Growth Phase</h3>
+              <p>Added construction & maintenance services to meet growing market demands in Rwanda.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">2020</div>
+            <div class="timeline-content">
+              <h3>Community Impact</h3>
+              <p>Strengthened focus on youth employment and skills development initiatives across Rwanda.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">Today</div>
+            <div class="timeline-content">
+              <h3>Market Leader</h3>
+              <p>EHL continues to grow as a reputable service provider with a commitment to excellence and community development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-content">
+        <h2>What Our Clients Say</h2>
+  
+        <div class="testimonial-slide">
+          <div class="testimonial-item active">
+            <div class="testimonial-text">
+              "EHL delivers reliable solutions for clients and communities."
+            </div>
+            <div class="testimonial-author">Corporate Client, Kigali</div>
+          </div>
+  
+          <div class="testimonial-item">
+            <div class="testimonial-text">
+              "Their professionalism and dedication exceeded our expectations."
+            </div>
+            <div class="testimonial-author">NGO Partner, Rwanda</div>
+          </div>
+  
+          <div class="testimonial-item">
+            <div class="testimonial-text">
+              "We highly recommend EHL for sustainable and impactful solutions."
+            </div>
+            <div class="testimonial-author">Government Official, Rwanda</div>
+          </div>
+        </div>
+  
+        <div class="testimonial-indicators">
+          <div class="testimonial-dot active" data-index="0"></div>
+          <div class="testimonial-dot" data-index="1"></div>
+          <div class="testimonial-dot" data-index="2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Subsidary</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Our Services</h3>
+          <ul>
+            <li>Restaurant & Catering</li>
+            <li>General Cleaning</li>
+            <li>Gardening</li>
+            <li>Construction</li>
+            <li>Maintenance</li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li>Kimihurura, KABC Building</li>
+            <li>KN 5 Rd, Kigali | 3rd Floor</li>
+            <li>(+250) 788 310 273</li>
+            <li>info@ehl.rw</li>
+            <li>kiggen20@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>Copyright © 2024 Eagle Mark Holding Ltd. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for mobile navigation functionality -->
+  <script>
+const testimonials = document.querySelectorAll(".testimonial-item");
+  const dots = document.querySelectorAll(".testimonial-dot");
+  let currentIndex = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach((item, i) => {
+      item.classList.toggle("active", i === index);
+      dots[i].classList.toggle("active", i === index);
+    });
+  }
+
+  function nextTestimonial() {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    showTestimonial(currentIndex);
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      currentIndex = parseInt(dot.dataset.index);
+      showTestimonial(currentIndex);
+    });
+  });
+
+  setInterval(nextTestimonial, 5000); // slide every 5 seconds
+
+
+    const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  const overlay = document.querySelector(".overlay");
+  const closeBtn = document.querySelector(".close-btn");
+
+  // ✅ Add this function to handle closing
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+    overlay.classList.remove("active");
+  }
+
+  // Toggle Mobile Menu
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    overlay.classList.toggle("active");
+  });
+
+  // Close mobile menu when clicking on a nav link
+  const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // ✅ Now these work correctly
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+    // Mobile Navigation Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      const toggleIcon = mobileNavToggle.querySelector('i');
+      
+      mobileNavToggle.addEventListener('click', function(event) {
+        event.stopPropagation();
+        navMenu.classList.toggle('show');
+        
+        // Update icon based on menu state
+        if (navMenu.classList.contains('show')) {
+          toggleIcon.classList.remove('fa-bars');
+          toggleIcon.classList.add('fa-times');
+        } else {
+          toggleIcon.classList.remove('fa-times');
+          toggleIcon.classList.add('fa-bars');
+        }
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!navMenu.contains(event.target) && !mobileNavToggle.contains(event.target) && navMenu.classList.contains('show')) {
+          navMenu.classList.remove('show');
+          toggleIcon.classList.remove('fa-times');
+          toggleIcon.classList.add('fa-bars');
+        }
+      });
+      
+      // Prevent menu from closing when clicking inside
+      navMenu.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      // Close menu when window is resized above mobile breakpoint
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
+          navMenu.classList.remove('show');
+          toggleIcon.classList.remove('fa-times');
+          toggleIcon.classList.add('fa-bars');
+        }
+      });
+      
+      // Ensure links in the navigation work properly
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          // If on mobile, close the menu after clicking a link
+          if (window.innerWidth <= 768) {
+            navMenu.classList.remove('show');
+            toggleIcon.classList.remove('fa-times');
+            toggleIcon.classList.add('fa-bars');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

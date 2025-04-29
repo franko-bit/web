@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eaglemark Holding Ltd</title>
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+ 
+    body {
+      color: #333;
+      line-height: 1.6;
+      width: 100%;
+      overflow-x: hidden;
+      background-color: #1e48415a;
+    }
+ 
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* HOOMI Style Navigation Menu */
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+.topbar {
+  background: #1E4841;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topbar span {
+  margin-right: 20px;
+}
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  height: 45px;
+}
+
+/* Menu Container */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1E4841;
+}
+
+/* Button */
+.membership-btn {
+  background: #1E4841;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.membership-btn:hover {
+  background: #1E4841;
+}
+
+.hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 2px;
+      width: 100%;
+      background-color: #1E4841;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+.mobile-membership {
+  display: none;
+}
+.overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 90;
+      display: none;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    .close-btn {
+      display: none;
+    }
+
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 0 1rem;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        background-color: #fff;
+        width: 250px;
+        height: calc(100vh - 60px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+        transition: all 0.3s ease;
+        z-index: 99;
+        box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-menu.active {
+        right: 0;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+      }
+
+      .nav-links li {
+        width: 100%;
+        height: auto;
+        margin: 8px 0;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 20px;
+        justify-content: flex-start;
+      }
+
+      /* Hide desktop membership button */
+      .membership-btn {
+        display: none;
+      }
+
+      /* Show mobile membership link */
+      .mobile-membership {
+        display: block;
+      }
+
+      .mobile-membership a {
+        color: #1E4841;
+        font-weight: 500;
+      }
+
+      /* Animated hamburger to X */
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      .close-btn {
+        display: block;
+        font-size: 30px;
+        color: #1E4841;
+        text-align: right;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    }
+    
+    /* Original Eaglemark Styles (keeping only what's needed) */
+    /* Hero Section */
+    .hero {
+      background-color: #f5f9f8;
+      padding: 40px 0;
+      width: 100%;
+    }
+ 
+    .hero-content {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 2%;
+    }
+
+    .hero-content h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #1E4841;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #1E4841;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 15px;
+      border-radius: 4px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+ 
+    .cta-button:hover {
+      background-color: #2a635a;
+      transform: translateY(-2px);
+    }
+
+    /* Carousel Styles */
+    .carousel-container {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      height: 550px;
+      border-radius: 0;
+      box-shadow: 0 5px 15px rgba(30, 72, 65, 0.12);
+      max-width: 100%;
+      width: 100%;
+    }
+ 
+    .carousel-slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+ 
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.8s ease, transform 0.8s ease, visibility 0s 0.8s;
+      transform: translateX(100%);
+    }
+ 
+    .carousel-slide.prev {
+      transform: translateX(-100%);
+      z-index: 1;
+    }
+ 
+    .carousel-slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      z-index: 2;
+    }
+ 
+    .meeting-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+ 
+    .slide-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+ 
+    .slide-title {
+  font-size: 53px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.slide-title .line-light {
+  font-weight: 400; /* lighter */
+}
+
+.slide-title .line-bold {
+  font-weight: 700; /* bolder */
+}
+
+ 
+    .slide-description {
+      font-size: 18px;
+      max-width: 700px;
+      line-height: 1.5;
+    }
+ 
+    .carousel-navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      gap: 20px;
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      z-index: 3;
+    }
+ 
+    .carousel-indicators {
+      display: flex;
+      gap: 10px;
+    }
+ 
+    .carousel-indicator {
+      width: 12px;
+      height: 12px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+ 
+    .carousel-indicator.active {
+      background-color: white;
+      transform: scale(1.2);
+    }
+
+    /* Navigation buttons for carousel */
+    .carousel-prev, .carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.5);
+      color: #1E4841;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-prev:hover, .carousel-next:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .carousel-prev {
+      left: 15px;
+    }
+
+    .carousel-next {
+      right: 15px;
+    }
+
+    /* Trust Section */
+    .trust-section {
+      padding: 50px 0;
+      background-color: #f5f9f8;
+      width: 100%;
+    }
+ 
+    .trust-content {
+      max-width: 1800px;
+      margin: 0 90px;
+      padding: 0 2%;
+    }
+
+    .trust-content h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      align-items: center;
+      color: #1E4841;
+    }
+ 
+    .trust-content p {
+      font-size: 15px;
+      color: #546;
+      margin-bottom: 20px;
+      max-width: 800px;
+    }
+
+    /* Focus Section */
+    .focus-section {
+      padding: 70px 0;
+      text-align: center;
+      background-color: #1E4841;;
+      width: 100%;
+    }
+ 
+    .focus-section h2 {
+      font-size: 26px;
+      margin-bottom: 40px;
+      color: #ffffff;
+      max-width: 1800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2%;
+    }
+ 
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 50px auto;
+      max-width: 1800px;
+      padding: 0 2%;
+    }
+    .focus-grid p{
+      color: white;
+    }
+    .focus-item {
+      padding: 30px;
+      border: 1px solid #e0e6e5;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .focus-item p{
+     color: white;
+    }
+ 
+    .focus-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(30, 72, 65, 0.1);
+      background-color: #fff;
+      
+      
+    }
+    .focus-item:hover p, 
+.focus-item:hover h3 {
+  color: #1E4841; /* Change text color to green when hovered */
+}
+ 
+    .focus-item h3 {
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+ 
+    
+ 
+    
+
+    /* Projects Gallery */
+    .projects-gallery {
+      padding: 60px 0;
+      background-color: #fff;
+      width: 100%;
+    }
+
+    .projects-gallery h2 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #1E4841;
+    }
+
+    .gallery-intro {
+      text-align: center;
+      max-width: 1800px;
+      margin: 0 auto 40px;
+      color: #555;
+      padding: 0 2%;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 250px;
+      gap: 15px;
+      margin: 0 auto 40px;
+      width: 100%;
+      max-width: 1800px;
+      padding: 0 2%;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item.large {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+   
+
+    /* Contact Section */
+    .contact-section {
+      padding: 70px 0;
+      text-align: center;
+      background-color: #f3fffc;
+      width: 100%;
+    }
+ 
+    .contact-section h2 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      color: #1E4841;
+    }
+ 
+    .contact-section p {
+      max-width: 1800px;
+      margin: 0 auto 40px;
+      font-size: 16px;
+      color: #555;
+      padding: 0 2%;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1E4841;
+      color: #fff;
+      padding: 50px 0 20px;
+      width: 100%;
+    }
+ 
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 40px;
+      max-width: 1800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2%;
+    }
+ 
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+    }
+ 
+    .footer-column h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+ 
+    .footer-column h3:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: #4a7570;
+    }
+ 
+    .footer-column ul {
+      list-style: none;
+    }
+ 
+    .footer-column ul li {
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #b0c5c2;
+      transition: color 0.3s;
+    }
+ 
+    .footer-column ul li:hover {
+      color: #fff;
+    }
+ 
+    .copyright {
+      font-size: 13px;
+      color: #8fb0ac;
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #2a5650;
+      max-width: 1800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+
+    @media (max-width: 1200px) {
+      .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .feature-grid {
+        flex-direction: column;
+      }
+      
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+      }
+      
+      .gallery-item.large {
+        grid-column: span 1;
+      }
+    }
+
+    /* Additional fix for full width on body and html */
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .paragraph-row {
+  display: flex;
+  gap: 75px; /* space between paragraphs */
+  flex-wrap: wrap; 
+}
+
+.paragraph-row p {
+  flex: 1; /* allows equal width */
+}
+@media (max-width: 768px) {
+  .paragraph-row {
+    flex-direction: column;
+    gap: 20px; 
+   width: 100%;  
+  }
+
+  .paragraph-row p {
+    flex: none;
+    width: 100%; /* full width on mobile */
+  }
+}
+
+   </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="topbar">
+    <span>info@ehl.rw</span>
+    <span>(+250) 788 310 273</span>
+  </div>
+  
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-icon"><img src="Logoo.png" alt="Eagle Mark Holding Logo"></span>
+    </div>
+    
+    <div class="nav-menu">
+      <div class="close-btn">&times;</div>
+      <ul class="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="SUBSIDIARY.html">Subsidiary</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+       
+      </ul>
+    </div>
+    
+    <button class="membership-btn">Get in touch</button>
+    
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <div class="overlay"></div>
+
+
+ 
+ 
+
+  <!-- Improved Carousel Section -->
+  <section class="meeting-section">
+    <div class="container">
+      <div class="carousel-container">
+        <div class="carousel-slides">
+          <div class="carousel-slide active">
+            <img src="5.jpg" alt="EHL Service Delivery - Slide 1" class="meeting-img">
+            <div class="slide-overlay">
+              <h2 class="slide-title">
+                <span class="line-light">Excellence in</span><br>
+                <span class="line-bold">Service Delivery</span>
+              </h2>
+              
+              <p class="slide-description">We provide top-tier solutions that exceed expectations and deliver lasting value to our clients across Rwanda.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="6.jpg" alt="EHL Service Delivery - Slide 2" class="meeting-img">
+            <div class="slide-overlay">
+              <h2 class="slide-title">
+                <span class="line-light">Professional Team</span><br>
+                <span class="line-bold">Expertise</span>
+              </h2>
+              <p class="slide-description">Our dedicated specialists bring years of experience and industry knowledge to every project we undertake.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="7.jpg" alt="EHL Service Delivery - Slide 3" class="meeting-img">
+            <div class="slide-overlay">
+              <h2 class="slide-title">
+                <span class="line-light">Commitment to</span><br>
+                <span class="line-bold">Quality</span>
+              </h2>
+              <p class="slide-description">Since 2008, we've maintained the highest standards in all our business operations and services.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-navigation">
+          
+          <div class="carousel-indicators">
+            <span class="carousel-indicator active" data-slide="0"></span>
+            <span class="carousel-indicator" data-slide="1"></span>
+            <span class="carousel-indicator" data-slide="2"></span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-content">
+        <h2>Established in 2008<br>Trusted Across Rwanda</h2>
+        <div class="paragraph-row">
+          <p>Eagle Mark Holding (EHL) Ltd is a private limited company, which was established on the 8th day of August 2008, with the objective of delivering reliable, high-quality solutions that make a positive impact on both our clients and the communities we serve.</p>
+          <p>Eagle Mark Holding (EHL) Ltd is a private limited company, which was established on the 8th day of August 2008, with the objective of delivering reliable, high-quality solutions that make a positive impact on both our clients and the communities we serve.</p>
+        </div>  <a href="About.html" class="cta-button">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="focus-section">
+    <div class="container">
+        <h2>Our Diverse Solutions<br>Exceptional Subsidiary Delivery</h2>
+      
+      <div class="focus-grid">
+      <a href="SUBSIDIARY.html">  <div class="focus-item">
+            <h3>Optima Cleaning Services</h3>
+            <p>Professional cleaning services for residential, commercial, and industrial properties, ensuring high standards and customer satisfaction.</p>
+          </div></a>
+          <a href="SUBSIDIARY.html">  <div class="focus-item dark">
+            <h3>Genuina Hospitality & Catering</h3>
+            <p>Tailored hospitality and catering solutions for events and institutions, focused on delivering quality service and memorable experiences.</p>
+          </div> </a>
+          <a href="SUBSIDIARY.html">  <div class="focus-item">
+            <h3>Solida Engineering</h3>
+            <p>Comprehensive architectural, structural, and civil engineering solutions, including MEP systems for building and infrastructure projects.</p>
+          </div> </a>
+          <a href="SUBSIDIARY.html">  <div class="focus-item">
+            <h3>Proxima Supplies & Logistics</h3>
+            <p>Efficient logistics solutions and general supplies to ensure smooth operations across various industries.</p>
+          </div> </a>
+          <a href="SUBSIDIARY.html">  <div class="focus-item">
+            <h3>Seven Star Journeys</h3>
+            <p>Personalized travel experiences, crafting seamless and unforgettable journeys for our clients.</p>
+          </div> </a>
+          <a href="SUBSIDIARY.html"> <div class="focus-item">
+            <h3>Delta Mining & Trading</h3>
+            <p>Sustainable mining and trading, contributing to responsible resource management and economic growth.</p>
+          </div> </a>          
+      </div>
+      
+      <p style="color: white;">EHL provides top-tier services across a range of industries, delivering reliable, high-quality solutions that make a positive impact on both our clients and the communities we serve.</p>
+      
+    </div>
+  </section>
+
+  <section class="projects-gallery">
+    <div class="container">
+      <h2>Our Gallery</h2>
+      <p class="gallery-intro">Explore our Gallery and see the quality of our work across different sectors.</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="1.jpg" alt="Project Image - Interior Design">
+          
+        </div>
+        
+        <div class="gallery-item">
+          <img src="2.jpg" alt="Project Image - Office Space">
+          
+        </div>
+        
+        <div class="gallery-item">
+          <img src="3.jpg" alt="Project Image - Accent Lighting">
+          
+        </div>
+        
+        <div class="gallery-item">
+          <img src="4.jpeg" alt="Project Image - Library">
+         
+        </div>
+        
+        <div class="gallery-item">
+          <img src="5.jpg" alt="Project Image - Restaurant">
+          
+        </div>
+        
+        <div class="gallery-item large">
+          <img src="6.jpg" alt="Project Image - Conference Hall">
+         
+        </div>
+      </div>
+  
+ 
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Get in Touch with Eaglemark Holding Ltd</h2>
+      <p>Reach out to us today to discuss how our services can meet your needs. We're committed to delivering exceptional results and creating sustainable value for all our clients.</p>
+      
+      <a href="contact.html" class="cta-button">Contact Us</a>
+    </div>
+  </section>
+</section>
+
+<footer>
+    <div class="container">
+           
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Subsidary</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Our Services</h3>
+          <ul>
+            <li>Restaurant & Catering</li>
+            <li>General Cleaning</li>
+            <li>Gardening</li>
+            <li>Construction</li>
+            <li>Maintenance</li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li>Kimihurura, KABC Building</li>
+            <li>KN 5 Rd, Kigali | 3rd Floor</li>
+            <li>(+250) 788 310 273</li>
+            <li>info@ehl.rw</li>
+            <li>kiggen20@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>Copyright © 2024 Eagle Mark Holding Ltd. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  const overlay = document.querySelector(".overlay");
+  const closeBtn = document.querySelector(".close-btn");
+
+  // ✅ Add this function to handle closing
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+    overlay.classList.remove("active");
+  }
+
+  // Toggle Mobile Menu
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    overlay.classList.toggle("active");
+  });
+
+  // Close mobile menu when clicking on a nav link
+  const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // ✅ Now these work correctly
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+    // Fix carousel functionality
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    let currentSlide = 0;
+    let isAnimating = false;
+    
+    // Check if we have slides and indicators to work with
+    if (slides.length > 0 && indicators.length > 0) {
+      // Function to update active slide with improved animation
+      function showSlide(index, direction = null) {
+        if (isAnimating) return;
+        isAnimating = true;
+        
+        // Calculate direction if not provided
+        if (direction === null) {
+          direction = index > currentSlide ? 'next' : 'prev';
+          // Handle edge cases
+          if (currentSlide === slides.length - 1 && index === 0) direction = 'next';
+          if (currentSlide === 0 && index === slides.length - 1) direction = 'prev';
+        }
+        
+        // Remove all classes first
+        slides.forEach(slide => {
+          slide.classList.remove('active', 'prev', 'next');
+        });
+        
+        // Add appropriate classes based on direction
+        if (direction === 'next') {
+          slides[currentSlide].classList.add('prev');
+        } else {
+          slides[currentSlide].classList.add('next');
+        }
+        
+        // Set the new active slide
+        slides[index].classList.add('active');
+        
+        // Update indicators
+        indicators.forEach(indicator => {
+          indicator.classList.remove('active');
+        });
+        indicators[index].classList.add('active');
+        
+        // Set timeout to allow animation to complete
+        setTimeout(() => {
+          isAnimating = false;
+        }, 800);
+        
+        currentSlide = index;
+      }
+      
+      // Add previous and next buttons to the carousel container
+      const carouselContainer = document.querySelector('.carousel-container');
+      
+      // Create prev button
+      const prevBtn = document.createElement('button');
+      prevBtn.className = 'carousel-prev';
+      prevBtn.innerHTML = '&#10094;'; // Left arrow
+      prevBtn.addEventListener('click', () => {
+        const newIndex = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+        showSlide(newIndex, 'prev');
+      });
+      carouselContainer.appendChild(prevBtn);
+      
+      // Create next button
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'carousel-next';
+      nextBtn.innerHTML = '&#10095;'; // Right arrow
+      nextBtn.addEventListener('click', () => {
+        const newIndex = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+        showSlide(newIndex, 'next');
+      });
+      carouselContainer.appendChild(nextBtn);
+      
+      // Add click handlers to indicators
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          if (currentSlide !== index) {
+            const direction = index > currentSlide ? 'next' : 'prev';
+            showSlide(index, direction);
+          }
+        });
+      });
+      
+      // Auto-advance slides every 5 seconds
+      let slideInterval = setInterval(() => {
+        const nextIndex = (currentSlide + 1) % slides.length;
+        showSlide(nextIndex, 'next');
+      }, 5000);
+      
+      // Pause auto-advance when hovering over carousel
+      carouselContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+      });
+      
+      // Resume auto-advance when mouse leaves carousel
+      carouselContainer.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => {
+          const nextIndex = (currentSlide + 1) % slides.length;
+          showSlide(nextIndex, 'next');
+        }, 5000);
+      });
+    }
+  });
+</script>
+</body>
+</html>

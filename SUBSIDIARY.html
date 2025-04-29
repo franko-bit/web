@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subsidiaries - Eagle Mark Holding Ltd</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    .topbar {
+  background: #1E4841;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topbar span {
+  margin-right: 20px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  height: 45px;
+}
+
+/* Menu Container */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1E4841;
+}
+
+/* Button */
+.membership-btn {
+  background: #1E4841;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.membership-btn:hover {
+  background: #1E4841;
+}
+
+.hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 2px;
+      width: 100%;
+      background-color: #1E4841;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+.mobile-membership {
+  display: none;
+}
+.overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 90;
+      display: none;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    .close-btn {
+      display: none;
+    }
+
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 0 1rem;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        background-color: #fff;
+        width: 250px;
+        height: calc(100vh - 60px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+        transition: all 0.3s ease;
+        z-index: 99;
+        box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-menu.active {
+        right: 0;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+      }
+
+      .nav-links li {
+        width: 100%;
+        height: auto;
+        margin: 8px 0;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 20px;
+        justify-content: flex-start;
+      }
+
+      /* Hide desktop membership button */
+      .membership-btn {
+        display: none;
+      }
+
+      /* Show mobile membership link */
+      .mobile-membership {
+        display: block;
+      }
+
+      .mobile-membership a {
+        color: #1E4841;
+        font-weight: 500;
+      }
+
+      /* Animated hamburger to X */
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      .close-btn {
+        display: block;
+        font-size: 30px;
+        color: #1E4841;
+        text-align: right;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    }
+    
+    /* Hero Section */
+    .hero {
+      background-color: #1E4841;
+      padding: 40px 0;
+      text-align: center;
+      color: #fff;
+    }
+    
+    .hero-content h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .hero-subtitle {
+      font-size: 18px;
+      color: #ddd;
+      margin-bottom: 25px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: #fff;
+      color: #1E4841;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 10px;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #f9f9f9;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }   
+    
+    /* Tagline Section */
+    .tagline {
+      text-align: center;
+      padding: 40px 0;
+      color: #1E4841;
+    }
+        
+    .tagline h2 {
+      font-size: 24px;
+    }
+
+    /* Subsidiary Introduction */
+    .subsidiary-intro {
+      text-align: center;
+      padding: 10px 0 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .subsidiary-intro p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* ENHANCED CARDS STYLING */
+    .cards-container {
+      margin: 70px 0;
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    .card {
+      display: flex;
+      border: none;
+      margin: 60px auto;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      max-width: 1000px;
+      background-color: #fff;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(30, 72, 65, 0.15);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #1E4841, #3a8a7e);
+    }
+
+    .card-img {
+      width: 440px;
+      height: auto;
+      min-height: 340px;
+      background-color: #f5f5f5;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    .card:hover .card-img {
+      transform: scale(1.05);
+    }
+
+    .card-img::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(30, 72, 65, 0), rgba(30, 72, 65, 0.4));
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .card-img::after {
+      opacity: 0.7;
+    }
+
+    .card-content {
+      padding: 40px 35px;
+      flex: 1;
+      position: relative;
+    }
+
+    .card-content h3 {
+      margin-bottom: 20px;
+      color: #1E4841;
+      font-size: 24px;
+      font-weight: 700;
+      border-bottom: 2px solid rgba(30, 72, 65, 0.3);
+      padding-bottom: 12px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .card-content h3::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 40%;
+      height: 2px;
+      background-color: #1E4841;
+      transition: width 0.4s ease;
+    }
+
+    .card:hover .card-content h3::after {
+      width: 70%;
+    }
+
+    .card-content p {
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .card-content ul {
+      list-style: none;
+      margin: 0 0 25px 10px;
+      padding: 0;
+    }
+
+    .card-content ul li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 14px;
+      color: #555;
+      font-size: 15px;
+      transition: transform 0.2s ease;
+    }
+
+    .card-content ul li:hover {
+      transform: translateX(5px);
+    }
+
+   
+
+    .read-more-btn {
+      display: inline-block;
+      background-color: transparent;
+      color: #1E4841;
+      border: 2px solid #1E4841;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .read-more-btn:hover {
+      background-color: #1E4841;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(30, 72, 65, 0.2);
+    }
+
+    .hidden-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card counter badge */
+    .card::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(30, 72, 65, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.4s ease;
+    }
+
+    .card:nth-child(1)::after { content: '01'; }
+    .card:nth-child(2)::after { content: '02'; }
+    .card:nth-child(3)::after { content: '03'; }
+    .card:nth-child(4)::after { content: '04'; }
+    .card:nth-child(5)::after { content: '05'; }
+    .card:nth-child(6)::after { content: '06'; }
+
+    .card:hover::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 900px) {
+      .card {
+        flex-direction: column;
+        margin: 40px 20px;
+      }
+      
+      .card-img {
+        width: 100%;
+        height: 280px;
+      }
+      
+      .card-content {
+        padding: 30px 25px;
+      }
+      
+      .card-content h3 {
+        font-size: 22px;
+      }
+
+      .card::before {
+        width: 100%;
+        height: 4px;
+        top: 0;
+        left: 0;
+      }
+
+      .card::after {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card-content {
+        padding: 25px 20px;
+      }
+      
+      .card-content h3 {
+        font-size: 20px;
+      }
+      
+      .card-content p,
+      .card-content ul li {
+        font-size: 14px;
+      }
+
+      .read-more-btn {
+        padding: 6px 16px;
+        font-size: 13px;
+      }
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #1E4841;
+      color: #fff;
+      padding: 40px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .footer-column h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #bbd5d1;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column ul li:hover {
+      color: #fff;
+    }
+    
+    .copyright {
+      font-size: 12px;
+      color: #8eb5b0;
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #33635c;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+ 
+    /* Container slide-in animation */
+    .nav-container {
+      animation: slideIn 0.8s ease-out;
+    }
+
+    /* Slide-in animation keyframes */
+    @keyframes slideIn {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .button-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .visit-website-btn {
+      display: inline-block;
+      background-color: #1E4841;
+      color: white;
+      border: 2px solid #1E4841;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    .visit-website-btn:hover {
+      background-color: #16352f;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(30, 72, 65, 0.2);
+    }
+    .service-list {
+      margin: 25px 0;
+      padding: 0;
+    }
+    
+    .service-list-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1E4841;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    
+    .service-list-title:before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 3px;
+      background: linear-gradient(to right, #1E4841, #3a8a7e);
+      margin-right: 10px;
+      border-radius: 2px;
+    }
+    
+    .service-list-items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .service-item i {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1E4841;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    .service-item {
+        position: relative;
+        padding: 12px 12px 12px 45px;
+      background-color: rgba(30, 72, 65, 0.05);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    
+    .service-item:hover {
+      background-color: rgba(30, 72, 65, 0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-item i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #1E4841;
+      font-size: 18px;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .service-item span {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      line-height: 1.3;
+      margin-left: 25px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <span>info@ehl.rw</span>
+    <span>(+250) 788 310 273</span>
+  </div>
+  <!-- Header Section -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-icon"><img src="Logoo.png" alt="Eagle Mark Holding Logo"></span>
+    </div>
+    
+    <div class="nav-menu">
+      <div class="close-btn">&times;</div>
+      <ul class="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="SUBSIDIARY.html">Subsidiary</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+       
+      </ul>
+    </div>
+    
+    <button class="membership-btn">Get in touch</button>
+    
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <div class="overlay"></div>
+
+  <section class="tagline">
+    <h2>Diverse Expertise, Unified Excellence</h2>
+  </section>
+
+  <div class="container">
+    <div class="subsidiary-intro">
+      <p>Eagle Mark Holding Ltd has built a diverse portfolio of specialized companies, each excelling in their respective industries while sharing our core values of quality, integrity, and customer satisfaction. Explore our family of companies below.</p>
+    </div>
+  </div>
+
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('genuina.png')"></div>
+        <div class="card-content">
+          <h3>Genuina Hospitality and Catering Services Ltd</h3>
+          <p>Genuina Hospitality and Catering Services Ltd is a full-service hospitality company under the Eaglemark Holding Group, offering tailored solutions in event planning, catering, and hotel management. The company provides professional support for a wide range of events including weddings, conferences, corporate gatherings, and social functions.</p>
+          <div class="hidden-content">
+            <p>With a team of experienced chefs, event planners, and hospitality professionals, Genuina ensures that every aspect of your event is handled with precision and care.</p>
+            
+            <div class="service-list">
+              <div class="service-list-title">Hospitality Services</div>
+              <ul class="service-list-items">
+                <li class="service-item">
+                  <i class="fas fa-utensils"></i>
+                  <span>Menu Customization</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-palette"></i>
+                  <span>Event Decor</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-users"></i>
+                  <span>Staffing Solutions</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-calendar-check"></i>
+                  <span>Event Coordination
+                  </span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-hotel"></i>
+                  <span>Hotel Management</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-leaf"></i>
+                  <span>Local Catering</span>
+                </li>
+              </ul>
+            </div>
+            
+            <p>Genuina prides itself on using locally-sourced ingredients whenever possible and accommodating special dietary requirements to ensure all guests have an exceptional dining experience.</p>
+          </div>
+          <div class="button-container">
+            <button class="read-more-btn">Read More</button>
+            <a href="proxima.html" class="visit-website-btn">Visit Website</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-img" style="background-image: url('solida.png')"></div>
+        <div class="card-content">
+          <h3>Solida Engineering Ltd</h3>
+          <p>Solida Engineering Ltd stands as a cornerstone of technical excellence within Eaglemark Holding Group, offering a wide range of engineering and construction services. The company specializes in architectural design, structural engineering, quantity surveying, and the execution of civil, mechanical, electrical, and plumbing (MEP) works.</p>
+          <div class="hidden-content">
+            <p>With a team of certified engineers and technical experts, Solida delivers innovative solutions for projects of all sizes.</p>
+            
+            <div class="service-list">
+              <div class="service-list-title">Engineering Solutions</div>
+              <ul class="service-list-items">
+                <li class="service-item">
+                  <i class="fas fa-drafting-compass"></i>
+                  <span>Arch Design</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-building"></i>
+                  <span>Struct Engineering</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-hard-hat"></i>
+                  <span>Build Management</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-cubes"></i>
+                  <span>Building Modeling</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-road"></i>
+                  <span>Infra Development</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-clipboard-check"></i>
+                  <span>Tech Consulting </span>
+                </li>
+              </ul>
+            </div>
+            
+            <p>Solida Engineering employs cutting-edge technology and sustainable practices to deliver projects that are not only structurally sound but also environmentally responsible and cost-effective.</p>
+          </div>
+          <div class="button-container">
+            <button class="read-more-btn">Read More</button>
+            <a href="proxima.html" class="visit-website-btn">Visit Website</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-img" style="background-image: url('optima.png')"></div>
+        <div class="card-content">
+          <h3>Optima Cleaning Services Ltd</h3>
+          <p>Optima Cleaning Services Ltd is a professional cleaning company committed to maintaining pristine environments across commercial, residential, and industrial settings. As part of Eaglemark Holding Group, Optima delivers a full spectrum of cleaning solutions—from routine janitorial services to specialized deep cleaning.</p>
+          <div class="hidden-content">
+            <p>Equipped with advanced cleaning equipment and eco-friendly products, Optima's trained professionals deliver spotless results while maintaining the highest standards of hygiene.</p>
+            
+            <div class="service-list">
+              <div class="service-list-title">Cleaning Solutions</div>
+              <ul class="service-list-items">
+                <li class="service-item">
+                  <i class="fas fa-building"></i>
+                  <span>Commercial Cleaning</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-industry"></i>
+                  <span>Industrial Facilities</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-home"></i>
+                  <span>Residential Services</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-hammer"></i>
+                  <span>Construction Cleanup</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-wind"></i>
+                  <span>Facade Care</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-spray-can"></i>
+                  <span>Targeted Cleaning</span>
+                </li>
+              </ul>
+            </div>
+            
+            <p>Optima's commitment to quality control includes regular inspections and client feedback, ensuring consistent satisfaction and creating healthier environments for all their clients.</p>
+          </div>
+          <div class="button-container">
+            <button class="read-more-btn">Read More</button>
+            <a href="proxima.html" class="visit-website-btn">Visit Website</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-img" style="background-image: url('proxima.png')"></div>
+        <div class="card-content">
+          <h3>Proxima Supplies & Logistics Ltd</h3>
+          <p>Proxima Supplies & Logistics Ltd offers comprehensive procurement, logistics, and supply chain services to clients across multiple sectors. As a trusted subsidiary of Eaglemark Holding Group, Proxima specializes in sourcing and purchasing goods, managing inventory, organizing warehousing, and coordinating transportation logistics.</p>
+          <div class="hidden-content">
+            <p>With established global networks and strategic partnerships, Proxima ensures efficient procurement and delivery of products and materials.</p>
+            
+            <div class="service-list">
+              <div class="service-list-title">Logistics & Supply Chain</div>
+              <ul class="service-list-items">
+                <li class="service-item">
+                  <i class="fas fa-search-dollar"></i>
+                  <span>Strategic Sourcing</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-boxes"></i>
+                  <span>Inventory Control</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-shipping-fast"></i>
+                  <span>Global Shipping</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-file-contract"></i>
+                  <span>Import/Export Doc</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-truck"></i>
+                  <span>Last-Mile Delivery</span>
+                </li>
+                <li class="service-item">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Supply Boost</span>
+                </li>
+              </ul>
+            </div>
+            
+            <p>Proxima leverages advanced logistics technology and tracking systems to provide clients with real-time visibility of their shipments and inventory, minimizing delays and maximizing efficiency throughout the supply chain.</p>
+          </div>
+          <div class="button-container">
+            <button class="read-more-btn">Read More</button>
+            <a href="proxima.html" class="visit-website-btn">Visit Website</a>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Card 5 -->
+    <!-- Card 2: Delta Mining and Trading Ltd -->
+<div class="card">
+    <div class="card-img" style="background-image: url('Delta.png')"></div>
+    <div class="card-content">
+      <h3>Delta Mining and Trading Ltd</h3>
+      <p>Delta Mining and Trading Ltd is part of Eaglemark Holding Group, specializing in the exploration, extraction, and trading of minerals and resources worldwide.</p>
+      <div class="hidden-content">
+        <div class="service-list">
+          <div class="service-list-title">Mining & Trading</div>
+          <ul class="service-list-items">
+            <li class="service-item">
+              <i class="fas fa-search"></i>
+              <span>Exploration</span>
+            </li>
+            <li class="service-item">
+              <i class="fas fa-cogs"></i>
+              <span>Extraction</span>
+            </li>
+            <li class="service-item">
+              <i class="fas fa-paint-brush"></i>
+              <span>Processing</span>
+            </li>
+            <li class="service-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Trading</span>
+            </li>
+            <li class="service-item">
+              <i class="fas fa-leaf"></i>
+              <span>Rehabilitation</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="button-container">
+        <button class="read-more-btn">Read More</button>
+        <a href="proxima.html" class="visit-website-btn">Visit Website</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Card 3: Seven Star Journeys Ltd -->
+  <div class="card">
+    <div class="card-img" style="background-image: url('#')"></div>
+    <div class="card-content">
+      <h3>Seven Star Journeys Ltd</h3>
+      <p>Seven Star Journeys Ltd offers personalized travel experiences, creating tailored packages and managing bookings for both leisure and corporate travel.</p>
+      <div class="hidden-content">
+        <div class="service-list">
+          <div class="service-list-title">Travel Services</div>
+          <ul class="service-list-items">
+            <li class="service-item">
+              <i class="fas fa-suitcase"></i>
+              <span>Leisure Packages</span>
+            </li>
+            <li class="service-item">
+              <i class="fas fa-briefcase"></i>
+              <span>Corporate Travel</span>
+            </li>
+            <li class="service-item">
+              <i class="fas fa-calendar-check"></i>
+              <span>MICE Planning</span>
+            </li>
+            <li class="service-item">
+              <i class="fas fa-mountain"></i>
+              <span>Adventure Tours</span>
+            </li>
+            <li class="service-item">
+              <i class="fas fa-passport"></i>
+              <span>Visa Assistance</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="button-container">
+        <button class="read-more-btn">Read More</button>
+        <a href="proxima.html" class="visit-website-btn">Visit Website</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Subsidary</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Our Services</h3>
+          <ul>
+            <li>Restaurant & Catering</li>
+            <li>General Cleaning</li>
+            <li>Gardening</li>
+            <li>Construction</li>
+            <li>Maintenance</li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li>Kimihurura, KABC Building</li>
+            <li>KN 5 Rd, Kigali | 3rd Floor</li>
+            <li>(+250) 788 310 273</li>
+            <li>info@ehl.rw</li>
+            <li>kiggen20@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>Copyright © 2024 Eagle Mark Holding Ltd. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  const overlay = document.querySelector(".overlay");
+  const closeBtn = document.querySelector(".close-btn");
+
+  // ✅ Add this function to handle closing
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+    overlay.classList.remove("active");
+  }
+
+  // Toggle Mobile Menu
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    overlay.classList.toggle("active");
+  });
+
+  // Close mobile menu when clicking on a nav link
+  const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // ✅ Now these work correctly
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+  
+  // Read More functionality - FIXED
+  const readMoreButtons = document.querySelectorAll('.read-more-btn');
+  
+  readMoreButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Find the hidden content that is a sibling of this button's parent
+      const hiddenContent = this.parentElement.previousElementSibling;
+      
+      if (hiddenContent.style.display === 'block') {
+        hiddenContent.style.display = 'none';
+        this.textContent = 'Read More';
+      } else {
+        hiddenContent.style.display = 'block';
+        this.textContent = 'Read Less';
+        hiddenContent.style.animation = 'fadeIn 0.5s ease';
+      }
+    });
+  });
+  
+  // Add hover effect to cards
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      cards.forEach(c => {
+        if (c !== this) {
+          c.style.opacity = '0.85';
+          c.style.transition = 'opacity 0.3s ease';
+        }
+      });
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      cards.forEach(c => {
+        c.style.opacity = '1';
+      });
+    });
+  });
+  
+  // Number display animations for cards
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 100);
+      }
+    });
+  }, { threshold: 0.2 });
+  
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+});
+  </script>
+</body>
+</html>
