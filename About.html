@@ -208,10 +208,10 @@
     }
     
     .hero-content h1 {
-      font-size: 32px;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: #ffffff;
+      font-size: 80px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1E4841;
     }
     
     .hero-subtitle {
@@ -256,35 +256,143 @@
     }
     
     /* About Section */
-    .about-section {
-      padding: 60px 0;
-    }
-    
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-    
-    .about-content h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #1E4841;
-    }
-    
-    .about-content p {
-      margin-bottom: 15px;
-      color: #555;
-    }
-    
-    .about-image {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      box-shadow: 0 5px 15px rgba(30, 72, 65, 0.15);
-    }
-    
+/* Hero Banner */
+.hero-banner {
+  background-color: #FFFFFF;
+  padding: 80px 120px;
+  color: #333;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 100px;
+}
+
+.small-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #1E4841;
+}
+
+.title {
+  font-size: 58px; 
+    font-weight: 900; 
+    line-height: 1.1; 
+    margin: 0; 
+    margin-bottom: 20px;
+}
+
+.light-text {
+  color: #777777;
+  font-weight: 300;
+}
+
+.hero-right {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.btn {
+  background: #1E4841;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #15332D;
+}
+
+.arrow {
+  margin-left: 8px;
+}
+@media screen and (max-width: 1200px) {
+  .hero-banner {
+    padding: 60px 80px;
+  }
+  
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-banner {
+    padding: 50px 60px;
+  }
+  
+  .title {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-banner {
+    padding: 0px;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    gap: 0px;
+  }
+  
+  .hero-left, .hero-right {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .small-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-banner {
+    padding: 30px 20px;
+  }
+  
+  .title {
+    font-size: 26px;
+  }
+  
+  .description {
+    font-size: 15px;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+  }
+}
     /* Mission Section */
     .mission-section {
       padding: 60px 0;
@@ -734,34 +842,32 @@
     </div>
   </nav>
   <div class="overlay"></div>
-  <!-- Hero Section -->
-  <section class="hero">
+
+  <section class="hero-banner">
     <div class="container">
       <div class="hero-content">
-        <h1>About EHL</h1>
-        <p class="hero-subtitle">Eagle Mark Holding Ltd - Established August 8, 2008</p>
-      </div>
-    </div>
-  </section>
-
- <!-- About Section -->
-  <section class="about-section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-content">
-          <h2>Eagle Mark Holding (EHL) Ltd</h2>
-          <p>Eagle Mark Holding (EHL) Ltd is a private limited company, which was established on the 8th day of August 2008, with the objective of delivering reliable, high-quality solutions that make a positive impact on both our clients and the communities we serve.</p>
-          <p>EHL is also dedicated to empowering the Rwandan youth with the skills and experience to thrive by creating sustainable job opportunities.</p>
-          <p>EHL provides top-tier services across a range of industries, such as restaurant & catering, general cleaning & gardening, construction & maintenance, and more.</p>
-          <a href="#" class="cta-button">Learn More</a>
+        <div class="hero-left">
+          <p class="small-title">About Us</p>
+          <h1 class="title">
+            Innovative<br>
+            Solutions For a<br>
+            <span class="light-text">Better Future</span>
+          </h1>
         </div>
-        <div class="about-image-container">
-          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1745939976/1_ghayyk.jpg" alt="EHL Team" class="about-image">
+        <div class="hero-right">
+          <h2 style="font-size: 24px; margin-bottom: 20px; color: #fff;">Eagle Mark Holding (EHL) Ltd</h2>
+          <p class="description">
+            Eagle Mark Holding (EHL) Ltd is a private limited company established on August 8, 2008, with the objective of delivering reliable, high-quality solutions that make a positive impact on both our clients and the communities we serve.
+          </p>
+          <p class="description" style="margin-bottom: 30px;">
+            EHL is dedicated to empowering Rwandan youth with the skills and experience to thrive by creating sustainable job opportunities across various industries.
+          </p>
+          <a href="#about" class="btn">View Divisions <span class="arrow">→</span></a>
         </div>
       </div>
     </div>
   </section>
- 
+  
   <!-- Mission Section -->
   <section class="mission-section">
     <div class="container">
