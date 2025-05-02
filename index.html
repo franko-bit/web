@@ -381,8 +381,8 @@ body {
     }
  
     .carousel-indicator {
-      width: 12px;
-      height: 12px;
+      width: 5px;
+      height: 5px;
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 50%;
       cursor: pointer;
@@ -454,65 +454,98 @@ body {
     }
 
     /* Focus Section */
-    .focus-section {
-      padding: 70px 0;
+    .focus-section{
+      background-color: #1E4841;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      padding: 2rem 1rem;
+    }
+    .containertwo {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .containertwo h2 {
+      font-size: 2.2rem;
       text-align: center;
-      background-color: #1E4841;;
-      width: 100%;
+      margin-bottom: 2.5rem;
+      color: white;
+      line-height: 1.3;
     }
- 
-    .focus-section h2 {
-      font-size: 26px;
-      margin-bottom: 40px;
-      color: #ffffff;
-      max-width: 1800px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 2%;
-    }
- 
+
     .focus-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin: 50px auto;
-      max-width: 1800px;
-      padding: 0 2%;
-    }
-    .focus-grid p{
-      color: white;
-    }
-    .focus-item {
-      padding: 30px;
-      border: 1px solid #e0e6e5;
-      border-radius: 8px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      gap: 30px;
     }
 
-    .focus-item p{
-     color: white;
+    .focus-item {
+      background-color: #226055;
+      border-radius: 20px;
+      padding: 24px;
+      position: relative;
+      text-decoration: none;
+      display: block;
+      color: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease;
+      min-height: 260px;
     }
- 
+
     .focus-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(30, 72, 65, 0.1);
-      background-color: #fff;
-      
-      
+      transform: translateY(-6px);
     }
-    .focus-item:hover p, 
-.focus-item:hover h3 {
-  color: #1E4841; /* Change text color to green when hovered */
-}
- 
+
+    .focus-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70%;
+      height: 50px;
+      background-color: #2d7064;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
     .focus-item h3 {
-      color: #ffffff;
-      margin-bottom: 15px;
+      margin-top: 50px;
+      font-size: 20px;
+      color: white;
     }
- 
-    
- 
-    
+
+    .focus-item p {
+      font-size: 15px;
+      color: #f0f0f0;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Tablet view (2 columns) */
+    @media (max-width: 992px) {
+      .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile view (1 column) */
+    @media (max-width: 600px) {
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .containertwo h2 {
+        font-size: 1.6rem;
+      }
+
+      .focus-item {
+        padding: 20px;
+      }
+    }
 
     /* Projects Gallery */
     .projects-gallery {
@@ -573,8 +606,35 @@ body {
       transform: scale(1.05);
     }
 
-   
+    @media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
+  .gallery-item.large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-gallery h2 {
+    font-size: 22px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 330px; /* Space between images on mobile */
+  }
+
+  .gallery-item {
+    aspect-ratio: 1 / 1; /* Square shape only on mobile */
+    margin-bottom: 10px; /* Adjust spacing between rows */
+  }
+
+  .gallery-item.large {
+    grid-column: span 1;
+  }
+}
     /* Contact Section */
     .contact-section {
       padding: 70px 0;
@@ -596,112 +656,274 @@ body {
       color: #555;
       padding: 0 2%;
     }
+    @media (max-width: 1024px) {
+  .contact-section {
+    margin-top: 300px;
+    padding: 10px 0; /* Reduced padding for tablets */
+  }
 
+  .contact-section h2 {
+    font-size: 22px; /* Adjust font size on tablets */
+  }
+
+  .contact-section p {
+    font-size: 14px; /* Adjust font size on tablets */
+    padding: 0 5%; /* Increase padding for better readability */
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 30px 0; /* Reduced padding for mobile */
+  }
+
+  .contact-section h2 {
+    font-size: 20px; /* Adjust font size on mobile */
+    margin-bottom: 20px;
+  }
+
+  .contact-section p {
+    font-size: 14px; /* Maintain font size for readability on mobile */
+    padding: 0 5%; /* Adjust padding on mobile */
+    margin: 0 auto 30px; /* Adjust margin to prevent overcrowding */
+  }
+}
     /* Footer */
-    footer {
-      background-color: #1E4841;
-      color: #fff;
-      padding: 50px 0 20px;
-      width: 100%;
-    }
- 
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 40px;
-      margin-bottom: 40px;
-      max-width: 1800px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 2%;
-    }
- 
-    .footer-column {
-      flex: 1;
-      min-width: 200px;
-    }
- 
-    .footer-column h3 {
-      font-size: 18px;
-      margin-bottom: 20px;
-      position: relative;
-      padding-bottom: 10px;
-    }
- 
-    .footer-column h3:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 40px;
-      height: 2px;
-      background-color: #4a7570;
-    }
- 
-    .footer-column ul {
-      list-style: none;
-    }
- 
-    .footer-column ul li {
-      margin-bottom: 12px;
-      font-size: 14px;
-      color: #b0c5c2;
-      transition: color 0.3s;
-    }
- 
-    .footer-column ul li:hover {
-      color: #fff;
-    }
- 
-    .copyright {
-      font-size: 13px;
-      color: #8fb0ac;
-      text-align: center;
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px solid #2a5650;
-      max-width: 1800px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 2%;
-      padding-right: 2%;
-    }
+    .footer-container {
+            background-color: #1E4841;
+            width: 100%;
+            /* max-width: 1200px; */
+            padding: 3rem 2.5rem;
+          
+            position: relative;
+            overflow: hidden;
+        }
 
-    @media (max-width: 1200px) {
-      .focus-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
+        }
 
-    @media (max-width: 768px) {
-      .feature-grid {
-        flex-direction: column;
-      }
-      
-      .focus-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .footer-content {
-        flex-direction: column;
-      }
-      
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+        .brand {
+            flex: 1.2;
+            padding-right: 2rem;
+        }
 
-    @media (max-width: 576px) {
-      .gallery-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 200px;
-      }
-      
-      .gallery-item.large {
-        grid-column: span 1;
-      }
-    }
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo-squares {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3px;
+            margin-right: 12px;
+        }
+
+        .square {
+            width: 10px;
+            height: 10px;
+            background-color: #1E4841;
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-logo:hover .square:nth-child(1) {
+            transform: translate(-2px, -2px);
+            background-color: #34796E;
+        }
+
+        .brand-logo:hover .square:nth-child(2) {
+            transform: translate(2px, -2px);
+        }
+
+        .brand-logo:hover .square:nth-child(3) {
+            transform: translate(-2px, 2px);
+        }
+
+        .brand-logo:hover .square:nth-child(4) {
+            transform: translate(2px, 2px);
+            background-color: #34796E;
+        }
+
+        .brand-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-tagline {
+            font-size: 15px;
+            color: #e0e0e0;
+            max-width: 240px;
+            line-height: 1.5;
+            font-weight: 300;
+            letter-spacing: -0.3px;
+            position: relative;
+        }
+
+        .brand-tagline::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.3));
+            border-radius: 2px;
+        }
+
+        .navigation {
+            flex: 2;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-column {
+            margin-right: 1rem;
+            flex: 1;
+        }
+
+        .footer-column h3 {
+            font-size: 13px;
+            color: #adb5bd;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .footer-column li::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            /* background-color: #5ee1cb; */
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .footer-column li:hover {
+            color: #5ee1cb  ;
+            transform: translateX(3px);
+        }
+
+        .footer-column li:hover::after {
+            width: 100%;
+        }
+
+        .chart-background {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.07;
+            overflow: hidden;
+        }
+
+        .chart-line {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            align-items: flex-end;
+            padding-bottom: 20px;
+        }
+
+        .chart-bar {
+            width: 5px;
+            background-color: #adb5bd;
+            margin-right: 8px;
+            border-radius: 4px 4px 0 0;
+            transition: height 1s ease, background-color 0.5s ease;
+        }
+
+        .chart-bar:nth-child(10n) {
+            background-color: #1E4841;
+            width: 6px;
+        }
+
+        .chart-bar:nth-child(5n) {
+            background-color: #212529;
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #adb5bd;
+            position: relative;
+            z-index: 2;
+        }
+
+        .copyright p {
+            font-weight: 400;
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30%;
+            height: 40%;
+            background: radial-gradient(circle at bottom right, rgba(30, 72, 65, 0.05), transparent 70%);
+            z-index: 1;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .brand {
+                margin-bottom: 3rem;
+                padding-right: 0;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+
+            .footer-column {
+                margin-bottom: 2rem;
+                margin-right: 0;
+            }
+
+            .copyright {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
 
     /* Additional fix for full width on body and html */
     html, body {
@@ -778,56 +1000,109 @@ body {
  
  
 
-  <!-- Improved Carousel Section -->
   <section class="meeting-section">
     <div class="container">
       <div class="carousel-container">
         <div class="carousel-slides">
-          <div class="carousel-slide active">
-            <img src="https://res.cloudinary.com/franklinrw/image/upload/v1745939409/5_sfetmk.jpg" alt="EHL Service Delivery - Slide 1" class="meeting-img">
+        
+          <!-- Remaining Slides With Short Service Titles -->
+          <div class="carousel-slide">
+            <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746180741/6_jgzcmo.jpg" alt="Catering Services" class="meeting-img">
             <div class="slide-overlay">
               <h2 class="slide-title">
-                <span class="line-light">Excellence in</span><br>
+                <span class="line-light">Exceptional Catering</span><br>
                 <span class="line-bold">Service Delivery</span>
               </h2>
-              
-              <p class="slide-description">We provide top-tier solutions that exceed expectations and deliver lasting value to our clients across Rwanda.</p>
+              <p class="slide-description">
+                We provide top-tier catering solutions that exceed expectations and deliver lasting value to clients across Rwanda.
+              </p>
             </div>
           </div>
-          <div class="carousel-slide">
-            <img src="https://res.cloudinary.com/franklinrw/image/upload/v1745939380/6_br4hsm.jpg" alt="EHL Service Delivery - Slide 2" class="meeting-img">
-            <div class="slide-overlay">
-              <h2 class="slide-title">
-                <span class="line-light">Professional Team</span><br>
-                <span class="line-bold">Expertise</span>
-              </h2>
-              <p class="slide-description">Our dedicated specialists bring years of experience and industry knowledge to every project we undertake.</p>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="https://res.cloudinary.com/franklinrw/image/upload/v1745939365/7_iev30n.jpg" alt="EHL Service Delivery - Slide 3" class="meeting-img">
-            <div class="slide-overlay">
-              <h2 class="slide-title">
-                <span class="line-light">Commitment to</span><br>
-                <span class="line-bold">Quality</span>
-              </h2>
-              <p class="slide-description">Since 2008, we've maintained the highest standards in all our business operations and services.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="carousel-navigation">
           
+          <div class="carousel-slide">
+            <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746181021/civ_gdc4um.jpg" alt="Engineering" class="meeting-img">
+            <div class="slide-overlay">
+              <h2 class="slide-title">
+                <span class="line-light">Innovative Engineering</span><br>
+                <span class="line-bold">and Construction</span>
+              </h2>
+              <p class="slide-description">
+                We deliver innovative engineering, construction, and consultancy services that shape Rwanda’s infrastructure future.
+              </p>
+            </div>
+          </div>
+          
+          <div class="carousel-slide">
+            <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746181114/clean_lkprau.jpg" alt="Cleaning Services" class="meeting-img">
+            <div class="slide-overlay">
+              <h2 class="slide-title">
+                <span class="line-light">Professional Cleaning</span><br>
+                <span class="line-bold">Service Delivery</span>
+              </h2>
+              <p class="slide-description">
+                We offer expert cleaning solutions tailored to offices, homes, and facilities—ensuring spotless, hygienic environments.
+              </p>
+            </div>
+          </div>
+          
+          <div class="carousel-slide">
+            <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746181144/truck_xsjdpm.jpg" alt="Logistics" class="meeting-img">
+            <div class="slide-overlay">
+              <h2 class="slide-title">
+                <span class="line-light">Reliable Supply</span><br>
+                <span class="line-bold">and Logistics Services</span>
+              </h2>
+              <p class="slide-description">
+                We ensure efficient supply chain management and timely logistics solutions that support operations across Rwanda.
+              </p>
+            </div>
+          </div>
+          
+          <div class="carousel-slide">
+            <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746181169/min_hd5h08.jpg" alt="Mining & Trade" class="meeting-img">
+            <div class="slide-overlay">
+              <h2 class="slide-title">
+                <span class="line-light">Sustainable Mining</span><br>
+                <span class="line-bold">and Global Trading</span>
+              </h2>
+              <p class="slide-description">
+                We engage in ethical mining practices and international trade, ensuring value, sustainability, and long-term impact.
+              </p>
+            </div>
+          </div>
+          
+          <div class="carousel-slide">
+            <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746181192/trav_lmujwi.jpg" alt="Travel & Tour" class="meeting-img">
+            <div class="slide-overlay">
+              <h2 class="slide-title">
+                <span class="line-light">Unforgettable Travel</span><br>
+                <span class="line-bold">and Tour Experiences</span>
+              </h2>
+              <p class="slide-description">
+                We offer exceptional travel and tour services, creating memorable experiences across Rwanda and international destinations.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+  
+        <!-- Updated Indicators -->
+        <div class="carousel-navigation">
           <div class="carousel-indicators">
             <span class="carousel-indicator active" data-slide="0"></span>
             <span class="carousel-indicator" data-slide="1"></span>
             <span class="carousel-indicator" data-slide="2"></span>
+            <span class="carousel-indicator" data-slide="3"></span>
+            <span class="carousel-indicator" data-slide="4"></span>
+            <span class="carousel-indicator" data-slide="5"></span>
+            
           </div>
-          
         </div>
       </div>
     </div>
   </section>
+  
+  
 
   <!-- Trust Section -->
   <section class="trust-section">
@@ -836,7 +1111,7 @@ body {
         <h2>Established in 2008<br>Trusted Across Rwanda</h2>
         <div class="paragraph-row">
           <p>Eagle Mark Holding (EHL) Ltd is a private limited company, which was established on the 8th day of August 2008, with the objective of delivering reliable, high-quality solutions that make a positive impact on both our clients and the communities we serve.</p>
-          <p>Eagle Mark Holding (EHL) Ltd is a private limited company, which was established on the 8th day of August 2008, with the objective of delivering reliable, high-quality solutions that make a positive impact on both our clients and the communities we serve.</p>
+          <p>EHL is dedicated to empowering Rwandan youth with the skills and experience to thrive by creating sustainable job opportunities across various industries</p>
         </div>  <a href="About.html" class="cta-button">Our Story</a>
       </div>
     </div>
@@ -844,38 +1119,52 @@ body {
 
  
   <section class="focus-section">
-    <div class="container">
-        <h2>Our Diverse Solutions<br>Exceptional Subsidiary Delivery</h2>
-      
+    <div class="containertwo">
+      <h2>Our Diverse Solutions<br>Exceptional Subsidiary Delivery</h2>
+    
       <div class="focus-grid">
-      <a href="SUBSIDIARY.html">  <div class="focus-item">
+        <a href="SUBSIDIARY.html">
+          <div class="focus-item">
             <h3>Optima Cleaning Services</h3>
             <p>Professional cleaning services for residential, commercial, and industrial properties, ensuring high standards and customer satisfaction.</p>
-          </div></a>
-          <a href="SUBSIDIARY.html">  <div class="focus-item dark">
+          </div>
+        </a>
+  
+        <a href="SUBSIDIARY.html">
+          <div class="focus-item">
             <h3>Genuina Hospitality & Catering</h3>
             <p>Tailored hospitality and catering solutions for events and institutions, focused on delivering quality service and memorable experiences.</p>
-          </div> </a>
-          <a href="SUBSIDIARY.html">  <div class="focus-item">
+          </div>
+        </a>
+  
+        <a href="SUBSIDIARY.html">
+          <div class="focus-item">
             <h3>Solida Engineering</h3>
             <p>Comprehensive architectural, structural, and civil engineering solutions, including MEP systems for building and infrastructure projects.</p>
-          </div> </a>
-          <a href="SUBSIDIARY.html">  <div class="focus-item">
+          </div>
+        </a>
+  
+        <a href="SUBSIDIARY.html">
+          <div class="focus-item">
             <h3>Proxima Supplies & Logistics</h3>
             <p>Efficient logistics solutions and general supplies to ensure smooth operations across various industries.</p>
-          </div> </a>
-          <a href="SUBSIDIARY.html">  <div class="focus-item">
+          </div>
+        </a>
+  
+        <a href="SUBSIDIARY.html">
+          <div class="focus-item">
             <h3>Seven Star Journeys</h3>
             <p>Personalized travel experiences, crafting seamless and unforgettable journeys for our clients.</p>
-          </div> </a>
-          <a href="SUBSIDIARY.html"> <div class="focus-item">
+          </div>
+        </a>
+  
+        <a href="SUBSIDIARY.html">
+          <div class="focus-item">
             <h3>Delta Mining & Trading</h3>
             <p>Sustainable mining and trading, contributing to responsible resource management and economic growth.</p>
-          </div> </a>          
+          </div>
+        </a>
       </div>
-      
-      <p style="color: white;">EHL provides top-tier services across a range of industries, delivering reliable, high-quality solutions that make a positive impact on both our clients and the communities we serve.</p>
-      
     </div>
   </section>
 
@@ -886,32 +1175,32 @@ body {
       
       <div class="gallery-grid">
         <div class="gallery-item large">
-          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1745939976/1_ghayyk.jpg" alt="Project Image - Interior Design">
+          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746180974/ushy_eqwo61.jpg" alt="Project Image - Interior Design">
           
         </div>
         
         <div class="gallery-item">
-          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1745939969/2_au5aao.jpg" alt="Project Image - Office Space">
+          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746180795/car_bduqqe.jpg" alt="Project Image - Office Space">
           
         </div>
         
         <div class="gallery-item">
-          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1745939958/3_ctklon.jpg" alt="Project Image - Accent Lighting">
+          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746180871/3_u2qu2h.jpg" alt="Project Image - Accent Lighting">
           
         </div>
         
         <div class="gallery-item">
-          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1745939342/4_khcm6e.jpg" alt="Project Image - Library">
+          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746180905/clean2_ukac4r.jpg" alt="Project Image - Library">
          
         </div>
         
         <div class="gallery-item">
-          <img src="5.jpg" alt="Project Image - Restaurant">
+          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746180833/cons_ogryni.jpg" alt="Project Image - Restaurant">
           
         </div>
         
         <div class="gallery-item large">
-          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1745939380/6_br4hsm.jpg" alt="Project Image - Conference Hall">
+          <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746180952/min2_ks1lgm.jpg" alt="Project Image - Conference Hall">
          
         </div>
       </div>
@@ -922,55 +1211,104 @@ body {
     <div class="container">
       <h2>Get in Touch with Eaglemark Holding Ltd</h2>
       <p>Reach out to us today to discuss how our services can meet your needs. We're committed to delivering exceptional results and creating sustainable value for all our clients.</p>
-      
       <a href="contact.html" class="cta-button">Contact Us</a>
+      
     </div>
   </section>
 </section>
 
-<footer>
-    <div class="container">
-           
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Subsidary</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Our Services</h3>
-          <ul>
-            <li>Restaurant & Catering</li>
-            <li>General Cleaning</li>
-            <li>Gardening</li>
-            <li>Construction</li>
-            <li>Maintenance</li>
-          </ul>
-        </div>
-        
-        <div class="footer-column">
-          <h3>Contact</h3>
-          <ul>
-            <li>Kimihurura, KABC Building</li>
-            <li>KN 5 Rd, Kigali | 3rd Floor</li>
-            <li>(+250) 788 310 273</li>
-            <li>info@ehl.rw</li>
-            <li>kiggen20@gmail.com</li>
-          </ul>
-        </div>
+<div class="footer-container">
+  <div class="chart-background">
+      <div class="chart-line">
+          
+      </div>
+  </div>
+  
+  <div class="gradient-overlay"></div>
+  
+  <div class="footer-content">
+      <div class="brand">
+          <div class="brand-logo">
+              
+              <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746181977/lg_ea64vk.png" width="50px" height="50px" alt="">
+              <div class="brand-name" style="margin-left: 7px;">Eagle Mark</div>
+          </div>
+          <p class="brand-tagline">Holding Ltd.</p>
       </div>
       
-      <div class="copyright">
-        <p>Copyright © 2024 Eagle Mark Holding Ltd. All Rights Reserved</p>
+      <div class="navigation">
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                  <a href="index.html"><li>Home</li></a>
+                  <a href="About.html"><li>About Us</li></a>
+                  <a href="SUBSIDIARY.html"><li>Subsidary</li></a>
+                  <a href="contact.html"><li>Contact</li></a>
+              </ul>
+          </div>
+          
+          <div class="footer-column">
+              <h3>Our Services</h3>
+              <ul>
+                  <li>Restaurant & Catering</li>
+                  <li>General Cleaning</li>
+                  <li>Gardening</li>
+                  <li>Construction</li>
+                  <li>Maintenance</li>
+              </ul>
+          </div>
+          
+          <div class="footer-column">
+              <h3>Contact</h3>
+              <ul>
+                  <li>Kimihurura, KABC Building</li>
+                  <li>KN 5 Rd, Kigali | 3rd Floor</li>
+                  <li>(+250) 788 310 273</li>
+                  <li>info@ehl.rw</li>
+                  <li>kiggen20@gmail.com</li>
+              </ul>
+          </div>
       </div>
-    </div>
-  </footer>
+  </div>
+  
+  <div class="copyright">
+      <p>Copyright © 2024 Eagle Mark Holding Ltd. All Rights Reserved</p>
+  </div>
+</div>
+
   <script>
     
+    const chartLine = document.querySelector('.chart-line');
+        const barCount = 40;
+        
+        for (let i = 0; i < barCount; i++) {
+            const initialHeight = Math.floor(Math.random() * 60) + 5;
+            const bar = document.createElement('div');
+            bar.className = 'chart-bar';
+            bar.style.height = `${initialHeight}%`;
+            chartLine.appendChild(bar);
+            
+            // Add subtle animation
+            setInterval(() => {
+                const newHeight = initialHeight + (Math.random() * 15 - 7.5);
+                bar.style.height = `${Math.max(5, Math.min(95, newHeight))}%`;
+            }, 2000 + (i * 100));
+        }
+        
+        // Logo animation on scroll
+        window.addEventListener('scroll', () => {
+            const squares = document.querySelectorAll('.square');
+            const scrollPos = window.scrollY;
+            
+            squares.forEach((square, index) => {
+                const rotate = scrollPos / 100 * (index + 1);
+                square.style.transform = `rotate(${rotate}deg)`;
+            });
+        });
+
+
+
+
    document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
@@ -1045,7 +1383,7 @@ body {
         // Set timeout to allow animation to complete
         setTimeout(() => {
           isAnimating = false;
-        }, 800);
+        }, 400);
         
         currentSlide = index;
       }
@@ -1099,7 +1437,7 @@ body {
         slideInterval = setInterval(() => {
           const nextIndex = (currentSlide + 1) % slides.length;
           showSlide(nextIndex, 'next');
-        }, 5000);
+        }, 2900);
       });
     }
   });

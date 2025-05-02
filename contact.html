@@ -379,82 +379,242 @@
   }
   
   /* Footer */
-  footer {
-    background-color: #1E4841;
-    color: #fff;
-    padding: 40px 0 20px;
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-  
-  .footer-column {
-    flex: 1;
-    min-width: 200px;
-  }
-  
-  .footer-column h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #fff;
-    position: relative;
-    padding-bottom: 10px;
-  }
-  
-  .footer-column h3:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 30px;
-    background-color: #fff;
-  }
-  
-  .footer-column ul {
-    list-style: none;
-  }
-  
-  .footer-column ul li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #ccc;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-column ul li:hover {
-    color: #fff;
-  }
-  
-  .copyright {
-    font-size: 12px;
-    color: #aaa;
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #2a5950;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .contact-grid, .locations-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .form-row {
-      flex-direction: column;
-      gap: 0;
-    }
-  
-    .footer-content {
-      flex-direction: column;
-    }
-  }
+  .footer-container {
+            background-color: #1E4841;
+            width: 100%;
+            /* max-width: 1200px; */
+            padding: 3rem 2.5rem;
+          
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand {
+            flex: 1.2;
+            padding-right: 2rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo-squares {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3px;
+            margin-right: 12px;
+        }
+
+        .square {
+            width: 10px;
+            height: 10px;
+            background-color: #1E4841;
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-logo:hover .square:nth-child(1) {
+            transform: translate(-2px, -2px);
+            background-color: #34796E;
+        }
+
+        .brand-logo:hover .square:nth-child(2) {
+            transform: translate(2px, -2px);
+        }
+
+        .brand-logo:hover .square:nth-child(3) {
+            transform: translate(-2px, 2px);
+        }
+
+        .brand-logo:hover .square:nth-child(4) {
+            transform: translate(2px, 2px);
+            background-color: #34796E;
+        }
+
+        .brand-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-tagline {
+            font-size: 15px;
+            color: #e0e0e0;
+            max-width: 240px;
+            line-height: 1.5;
+            font-weight: 300;
+            letter-spacing: -0.3px;
+            position: relative;
+        }
+
+        .brand-tagline::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.3));
+            border-radius: 2px;
+        }
+
+        .navigation {
+            flex: 2;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-column {
+            margin-right: 1rem;
+            flex: 1;
+        }
+
+        .footer-column h3 {
+            font-size: 13px;
+            color: #adb5bd;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .footer-column li::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            /* background-color: #5ee1cb; */
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .footer-column li:hover {
+            color: #5ee1cb  ;
+            transform: translateX(3px);
+        }
+
+        .footer-column li:hover::after {
+            width: 100%;
+        }
+
+        .chart-background {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.07;
+            overflow: hidden;
+        }
+
+        .chart-line {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            align-items: flex-end;
+            padding-bottom: 20px;
+        }
+
+        .chart-bar {
+            width: 5px;
+            background-color: #adb5bd;
+            margin-right: 8px;
+            border-radius: 4px 4px 0 0;
+            transition: height 1s ease, background-color 0.5s ease;
+        }
+
+        .chart-bar:nth-child(10n) {
+            background-color: #1E4841;
+            width: 6px;
+        }
+
+        .chart-bar:nth-child(5n) {
+            background-color: #212529;
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #adb5bd;
+            position: relative;
+            z-index: 2;
+        }
+
+        .copyright p {
+            font-weight: 400;
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30%;
+            height: 40%;
+            background: radial-gradient(circle at bottom right, rgba(30, 72, 65, 0.05), transparent 70%);
+            z-index: 1;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .brand {
+                margin-bottom: 3rem;
+                padding-right: 0;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+
+            .footer-column {
+                margin-bottom: 2rem;
+                margin-right: 0;
+            }
+
+            .copyright {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
 
   /* Container slide-in animation */
 .nav-container {
@@ -814,49 +974,95 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-           
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Subsidary</li>
-            <li>Contact</li>
-          </ul>
+  <div class="footer-container">
+    <div class="chart-background">
+        <div class="chart-line">
+            
         </div>
-        <div class="footer-column">
-          <h3>Our Services</h3>
-          <ul>
-            <li>Restaurant & Catering</li>
-            <li>General Cleaning</li>
-            <li>Gardening</li>
-            <li>Construction</li>
-            <li>Maintenance</li>
-          </ul>
+    </div>
+    
+    <div class="gradient-overlay"></div>
+    
+    <div class="footer-content">
+        <div class="brand">
+            <div class="brand-logo">
+                
+                <img src="https://res.cloudinary.com/franklinrw/image/upload/v1746181977/lg_ea64vk.png" width="50px" height="50px" alt="">
+                <div class="brand-name" style="margin-left: 7px;">Eagle Mark</div>
+            </div>
+            <p class="brand-tagline">Holding Ltd.</p>
         </div>
         
-        <div class="footer-column">
-          <h3>Contact</h3>
-          <ul>
-            <li>Kimihurura, KABC Building</li>
-            <li>KN 5 Rd, Kigali | 3rd Floor</li>
-            <li>(+250) 788 310 273</li>
-            <li>info@ehl.rw</li>
-            <li>kiggen20@gmail.com</li>
-          </ul>
+        <div class="navigation">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="About.html"><li>About Us</li></a>
+                    <a href="SUBSIDIARY.html"><li>Subsidary</li></a>
+                    <a href="contact.html"><li>Contact</li></a>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul>
+                    <li>Restaurant & Catering</li>
+                    <li>General Cleaning</li>
+                    <li>Gardening</li>
+                    <li>Construction</li>
+                    <li>Maintenance</li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Kimihurura, KABC Building</li>
+                    <li>KN 5 Rd, Kigali | 3rd Floor</li>
+                    <li>(+250) 788 310 273</li>
+                    <li>info@ehl.rw</li>
+                    <li>kiggen20@gmail.com</li>
+                </ul>
+            </div>
         </div>
-      </div>
-      
-      <div class="copyright">
-        <p>Copyright © 2024 Eagle Mark Holding Ltd. All Rights Reserved</p>
-      </div>
     </div>
-  </footer>
+    
+    <div class="copyright">
+        <p>Copyright © 2024 Eagle Mark Holding Ltd. All Rights Reserved</p>
+    </div>
+  </div>
 
   <script>
+ const chartLine = document.querySelector('.chart-line');
+        const barCount = 40;
+        
+        for (let i = 0; i < barCount; i++) {
+            const initialHeight = Math.floor(Math.random() * 60) + 5;
+            const bar = document.createElement('div');
+            bar.className = 'chart-bar';
+            bar.style.height = `${initialHeight}%`;
+            chartLine.appendChild(bar);
+            
+            // Add subtle animation
+            setInterval(() => {
+                const newHeight = initialHeight + (Math.random() * 15 - 7.5);
+                bar.style.height = `${Math.max(5, Math.min(95, newHeight))}%`;
+            }, 2000 + (i * 100));
+        }
+        
+        // Logo animation on scroll
+        window.addEventListener('scroll', () => {
+            const squares = document.querySelectorAll('.square');
+            const scrollPos = window.scrollY;
+            
+            squares.forEach((square, index) => {
+                const rotate = scrollPos / 100 * (index + 1);
+                square.style.transform = `rotate(${rotate}deg)`;
+            });
+        });
+
+
 
     const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
